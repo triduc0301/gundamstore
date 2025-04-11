@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./routes";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+import { CartProvider } from "./contexts/CartContext";
+import { AuthProvider } from "./contexts/AuthContext";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <LanguageProvider>
+        <AuthProvider>
+          <CartProvider>
+            <div className="min-h-screen flex flex-col bg-black text-white">
+              <Navbar />
+              <main className="flex-grow pt-16">
+                <AppRoutes />
+              </main>
+              <Footer />
+            </div>
+          </CartProvider>
+        </AuthProvider>
+      </LanguageProvider>
+    </Router>
   );
-}
+};
 
 export default App;
