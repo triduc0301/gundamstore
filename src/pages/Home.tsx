@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Hero from "../components/sections/Hero";
 import CategoryList from "../components/layout/CategoryList";
 import FeaturedProducts from "../components/sections/FeaturedProducts";
@@ -21,11 +22,12 @@ const Home: React.FC = () => {
             <FeaturedProducts />
           </div>
         </div>
-      </div>
-      <div className="space-y-4">
-        <PopularProducts />
-        <DiscountedProducts />
-        <UpcomingProducts />
+
+        <div className="space-y-4">
+          <PopularProducts />
+          <DiscountedProducts />
+          <UpcomingProducts />
+        </div>
       </div>
     </div>
   );

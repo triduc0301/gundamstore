@@ -3,11 +3,13 @@ import ProductCard from "../products/ProductCard";
 import { gunplaApi, GunplaProduct } from "../../services/api";
 import Loading from "../common/Loading";
 import ProductSlider from "../products/ProductSlider";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const DiscountedProducts: React.FC = () => {
   const [products, setProducts] = useState<GunplaProduct[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -23,13 +25,13 @@ const DiscountedProducts: React.FC = () => {
         setProducts(discounted);
         setLoading(false);
       } catch (err) {
-        setError("Failed to load discounted products");
+        setError(t("common.errors.failedToLoad"));
         setLoading(false);
       }
     };
 
     fetchProducts();
-  }, []);
+  }, [t]);
 
   if (loading) return <Loading />;
   if (error) return <div className="text-red-500">{error}</div>;
@@ -39,9 +41,12 @@ const DiscountedProducts: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white mb-4">
-            <span className="text-[#CD7F32]">SPECIAL</span> DEALS
+            <span className="text-[#CD7F32]">
+              {t("sections.special.titleHighlight")}
+            </span>{" "}
+            {t("sections.special.title")}
           </h2>
-          <p className="text-gray-400">Limited time offers - Don't miss out!</p>
+          <p className="text-gray-400">{t("sections.special.subtitle")}</p>
         </div>
 
         <ProductSlider
@@ -54,40 +59,46 @@ const DiscountedProducts: React.FC = () => {
                 <div className="absolute inset-0 bg-red-600 text-white rounded-full flex items-center justify-center transform rotate-12 group-hover:rotate-0 transition-all duration-300">
                   <div className="text-center">
                     <div className="text-xl font-bold">-30%</div>
-                    <div className="text-xs">OFF</div>
+                    <div className="text-xs">{t("common.off")}</div>
                   </div>
                 </div>
               </div>
 
-              <div className="cursor-pointer bg-gray-900 p-6 rounded-lg transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <ProductCard product={product} />
+              <ProductCard product={product} />
 
-                {/* Price Section */}
-                <div className="mt-4 text-center">
-                  <span className="text-gray-400 line-through text-lg">
-                    ${product.originalPrice?.toFixed(2)}
-                  </span>
-                  <span className="text-[#CD7F32] text-2xl font-bold ml-4">
-                    ${product.price.toFixed(2)}
-                  </span>
-                </div>
+              {/* Price Section */}
+              <div className="mt-4 text-center">
+                <span className="text-gray-400 line-through text-lg">
+                  ${product.originalPrice?.toFixed(2)}
+                </span>
+                <span className="text-[#CD7F32] text-2xl font-bold ml-4">
+                  ${product.price.toFixed(2)}
+                </span>
+              </div>
 
-                {/* Timer Section */}
-                <div className="mt-4 text-center text-gray-400">
-                  <p className="text-sm mb-2">Offer ends in:</p>
-                  <div className="flex justify-center space-x-4">
-                    <div className="bg-gray-800 px-3 py-2 rounded">
-                      <span className="text-white font-bold">24</span>
-                      <span className="text-xs block">hours</span>
-                    </div>
-                    <div className="bg-gray-800 px-3 py-2 rounded">
-                      <span className="text-white font-bold">59</span>
-                      <span className="text-xs block">mins</span>
-                    </div>
-                    <div className="bg-gray-800 px-3 py-2 rounded">
-                      <span className="text-white font-bold">59</span>
-                      <span className="text-xs block">secs</span>
-                    </div>
+              {/* Timer Section */}
+              <div className="mt-4 text-center text-gray-400">
+                <p className="text-sm mb-2">
+                  {t("sections.special.offerEnds")}
+                </p>
+                <div className="flex justify-center space-x-4">
+                  <div className="bg-gray-800 px-3 py-2 rounded">
+                    <span className="text-white font-bold">24</span>
+                    <span className="text-xs block">
+                      {t("common.time.hours")}
+                    </span>
+                  </div>
+                  <div className="bg-gray-800 px-3 py-2 rounded">
+                    <span className="text-white font-bold">59</span>
+                    <span className="text-xs block">
+                      {t("common.time.minutes")}
+                    </span>
+                  </div>
+                  <div className="bg-gray-800 px-3 py-2 rounded">
+                    <span className="text-white font-bold">59</span>
+                    <span className="text-xs block">
+                      {t("common.time.seconds")}
+                    </span>
                   </div>
                 </div>
               </div>

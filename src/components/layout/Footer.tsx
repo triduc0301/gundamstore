@@ -1,25 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Footer: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-black text-white border-t border-gray-800">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* About Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">GUNDAM</h3>
-            <p className="text-gray-400">
-              Your premier destination for high-quality Gundam model kits and
-              accessories. We bring the best of Japanese craftsmanship to
-              enthusiasts worldwide.
-            </p>
+            <h3 className="text-2xl font-bold">{t("footer.about.title")}</h3>
+            <p className="text-gray-400">{t("footer.about.description")}</p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-[#CD7F32]">
-              Quick Links
+              {t("footer.quickLinks.title")}
             </h4>
             <ul className="space-y-2">
               <li>
@@ -27,7 +26,7 @@ const Footer: React.FC = () => {
                   to="/shop"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Shop
+                  {t("footer.quickLinks.shop")}
                 </Link>
               </li>
               <li>
@@ -35,7 +34,7 @@ const Footer: React.FC = () => {
                   to="/about"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  About Us
+                  {t("footer.quickLinks.aboutUs")}
                 </Link>
               </li>
               <li>
@@ -43,7 +42,7 @@ const Footer: React.FC = () => {
                   to="/contact"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Contact
+                  {t("footer.quickLinks.contact")}
                 </Link>
               </li>
               <li>
@@ -51,7 +50,7 @@ const Footer: React.FC = () => {
                   to="/faq"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  FAQ
+                  {t("footer.quickLinks.faq")}
                 </Link>
               </li>
             </ul>
@@ -59,14 +58,16 @@ const Footer: React.FC = () => {
 
           {/* Categories */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-[#CD7F32]">Categories</h4>
+            <h4 className="text-lg font-semibold text-[#CD7F32]">
+              {t("footer.categories.title")}
+            </h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/products/high-grade"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  High Grade
+                  {t("footer.categories.highGrade")}
                 </Link>
               </li>
               <li>
@@ -74,7 +75,7 @@ const Footer: React.FC = () => {
                   to="/products/master-grade"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Master Grade
+                  {t("footer.categories.masterGrade")}
                 </Link>
               </li>
               <li>
@@ -82,7 +83,7 @@ const Footer: React.FC = () => {
                   to="/products/real-grade"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Real Grade
+                  {t("footer.categories.realGrade")}
                 </Link>
               </li>
               <li>
@@ -90,7 +91,7 @@ const Footer: React.FC = () => {
                   to="/products/perfect-grade"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Perfect Grade
+                  {t("footer.categories.perfectGrade")}
                 </Link>
               </li>
             </ul>
@@ -98,12 +99,14 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-[#CD7F32]">Contact Us</h4>
+            <h4 className="text-lg font-semibold text-[#CD7F32]">
+              {t("footer.contactUs.title")}
+            </h4>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: info@gundam-store.com</li>
-              <li>Phone: +1 (555) 123-4567</li>
-              <li>Address: 123 Gundam Street</li>
-              <li>Tokyo, Japan 100-0001</li>
+              <li>{t("footer.contactUs.email")}</li>
+              <li>{t("footer.contactUs.phone")}</li>
+              <li>{t("footer.contactUs.address")}</li>
+              <li>{t("footer.contactUs.location")}</li>
             </ul>
             {/* Social Media Icons */}
             <div className="flex space-x-4 pt-4">
@@ -150,27 +153,25 @@ const Footer: React.FC = () => {
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} GUNDAM Store. All rights reserved.
-            </p>
+            <p className="text-gray-400 text-sm">{t("footer.bottom.rights")}</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
                 to="/privacy"
                 className="text-gray-400 hover:text-white text-sm transition-colors"
               >
-                Privacy Policy
+                {t("footer.bottom.privacy")}
               </Link>
               <Link
                 to="/terms"
                 className="text-gray-400 hover:text-white text-sm transition-colors"
               >
-                Terms of Service
+                {t("footer.bottom.terms")}
               </Link>
               <Link
                 to="/shipping"
                 className="text-gray-400 hover:text-white text-sm transition-colors"
               >
-                Shipping Info
+                {t("footer.bottom.shipping")}
               </Link>
             </div>
           </div>

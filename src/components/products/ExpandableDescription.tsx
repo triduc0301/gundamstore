@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 interface ExpandableDescriptionProps {
   text: string;
@@ -10,6 +11,7 @@ const ExpandableDescription: React.FC<ExpandableDescriptionProps> = ({
   maxLength = 300, // Default max length before truncation
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { t } = useLanguage();
   const needsTruncation = text.length > maxLength;
 
   const truncatedText =
@@ -23,7 +25,7 @@ const ExpandableDescription: React.FC<ExpandableDescriptionProps> = ({
           onClick={() => setIsExpanded(!isExpanded)}
           className="text-[#CD7F32] hover:text-[#B87333] transition-colors duration-300 text-sm font-medium focus:outline-none"
         >
-          {isExpanded ? "Show Less" : "Read More"}
+          {isExpanded ? t("common.showLess") : t("common.readMore")}
         </button>
       )}
     </div>

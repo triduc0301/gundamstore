@@ -42,7 +42,13 @@ const ProductDetail: React.FC = () => {
 
   const handleAddToCart = () => {
     if (product) {
-      addToCart(product, quantity);
+      addToCart({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        quantity: quantity,
+        image: product.image,
+      });
       setAddedToCart(true);
       setTimeout(() => setAddedToCart(false), 2000);
     }

@@ -1,4 +1,4 @@
-export const en = {
+export default {
   common: {
     navigation: {
       home: "HOME",
@@ -21,12 +21,33 @@ export const en = {
     cart: {
       title: "Shopping Cart",
       empty: "Your cart is empty",
+      clearAll: "Clear All",
       total: "Total",
-      checkout: "Checkout",
+      checkout: "Proceed to Checkout",
+      continueShopping: "Continue Shopping",
+      remove: "Remove",
+      quantity: "Quantity",
+      price: "Price",
+      subtotal: "Subtotal"
+    },
+    buttons: {
+      moreInfo: "More Info",
       addToCart: "Add to Cart",
-      addedToCart: "Added to Cart!",
-      quantity: "Quantity"
-    }
+      buyNow: "Buy Now",
+      checkout: "Checkout",
+      close: "Close"
+    },
+    errors: {
+      failedToLoad: "Failed to load products",
+      somethingWentWrong: "Something went wrong"
+    },
+    time: {
+      hours: "hours",
+      minutes: "mins",
+      seconds: "secs"
+    },
+    off: "OFF",
+    price: "${price}"
   },
   home: {
     hero: {
@@ -349,5 +370,92 @@ export const en = {
         }
       }
     }
+  },
+  footer: {
+    about: {
+      title: "GUNDAM",
+      description: "Your premier destination for high-quality Gundam model kits and accessories. We bring the best of Japanese craftsmanship to enthusiasts worldwide."
+    },
+    quickLinks: {
+      title: "Quick Links",
+      shop: "Shop",
+      aboutUs: "About Us",
+      contact: "Contact",
+      faq: "FAQ"
+    },
+    categories: {
+      title: "Categories",
+      highGrade: "High Grade",
+      masterGrade: "Master Grade",
+      realGrade: "Real Grade",
+      perfectGrade: "Perfect Grade"
+    },
+    contactUs: {
+      title: "Contact Us",
+      email: "Email: info@gundam-store.com",
+      phone: "Phone: +1 (555) 123-4567",
+      address: "Address: 123 Gundam Street",
+      location: "Tokyo, Japan 100-0001"
+    },
+    bottom: {
+      rights: "© {year} GUNDAM Store. All rights reserved.",
+      privacy: "Privacy Policy",
+      terms: "Terms of Service",
+      shipping: "Shipping Info"
+    }
+  },
+  sections: {
+    featured: {
+      title: "FEATURED PRODUCTS",
+      viewAll: "View All"
+    },
+    popular: {
+      title: "POPULAR PRODUCTS",
+      reviews_50plus: "50+ reviews",
+      sold_100plus: "100+ sold"
+    },
+    special: {
+      titleHighlight: "SPECIAL",
+      title: "DEALS",
+      subtitle: "Limited time offers - Don't miss out!",
+      offerEnds: "Offer ends in:"
+    },
+    upcoming: {
+      titleHighlight: "NEW",
+      title: "UPCOMING RELEASES",
+      releaseDate: "Release Date",
+      comingSoon: "Coming Soon",
+      preOrder: "Pre-order Available"
+    }
+  },
+  checkout: {
+    title: "Checkout",
+    shippingInfo: "Shipping Information",
+    paymentInfo: "Payment Information",
+    orderSummary: "Order Summary",
+    fullName: "Full Name",
+    email: "Email",
+    phone: "Phone Number",
+    address: "Address",
+    city: "City",
+    country: "Country",
+    postalCode: "Postal Code",
+    paymentMethod: "Payment Method",
+    cardNumber: "Card Number",
+    expiryDate: "Expiry Date",
+    cvv: "CVV",
+    placeOrder: "Place Order",
+    backToCart: "Back to Cart",
+    shippingMethod: "Shipping Method",
+    standard: "Standard Shipping",
+    express: "Express Shipping",
+    free: "Free",
+    estimatedDelivery: "Estimated Delivery",
+    days: "days",
+    orderTotal: "Order Total",
+    items: "Items",
+    shipping: "Shipping",
+    tax: "Tax",
+    grandTotal: "Grand Total"
   }
 }; 

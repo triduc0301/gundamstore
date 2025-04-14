@@ -1,7 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "../../contexts/CartContext";
 import { XMarkIcon, MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
-import GunplaImage from "../common/GunplaImage";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 interface CartProps {
   isOpen: boolean;
@@ -9,8 +10,15 @@ interface CartProps {
 }
 
 const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
-  const { items, removeFromCart, updateQuantity, totalItems, totalPrice } =
+  const { cartItems, removeFromCart, updateQuantity, totalItems, total } =
     useCart();
+  const { t } = useLanguage();
+  const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    onClose(); // Close cart sidebar
+    navigate("/checkout"); // Navigate to checkout page
+  };
 
   if (!isOpen) return null;
 
@@ -27,7 +35,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-800">
           <h2 className="text-xl font-bold text-white">
-            Shopping Cart ({totalItems})
+            {t("cart.title")} ({totalItems})
           </h2>
           <button
             onClick={onClose}
@@ -39,11 +47,11 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
 
         {/* Cart Items */}
         <div className="flex-1 overflow-y-auto p-6">
-          {items.length === 0 ? (
-            <p className="text-gray-400 text-center">Your cart is empty</p>
+          {cartItems.length === 0 ? (
+            <p className="text-gray-400 text-center">{t("cart.empty")}</p>
           ) : (
             <div className="space-y-6">
-              {items.map((item) => (
+              {cartItems.map((item) => (
                 <div key={item.id} className="flex space-x-4">
                   {/* Product Image */}
                   <div className="w-24 h-24 bg-gray-900 rounded-sm overflow-hidden">
@@ -66,6 +74,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
                           updateQuantity(item.id, item.quantity - 1)
                         }
                         className="p-1 hover:bg-gray-800 rounded-sm transition-colors"
+                        aria-label={t("cart.quantity")}
                       >
                         <MinusIcon className="h-4 w-4" />
                       </button>
@@ -75,6 +84,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
                           updateQuantity(item.id, item.quantity + 1)
                         }
                         className="p-1 hover:bg-gray-800 rounded-sm transition-colors"
+                        aria-label={t("cart.quantity")}
                       >
                         <PlusIcon className="h-4 w-4" />
                       </button>
@@ -85,6 +95,7 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
                   <button
                     onClick={() => removeFromCart(item.id)}
                     className="text-gray-400 hover:text-white transition-colors"
+                    aria-label={t("cart.remove")}
                   >
                     <XMarkIcon className="h-5 w-5" />
                   </button>
@@ -97,16 +108,17 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
         {/* Footer */}
         <div className="border-t border-gray-800 p-6">
           <div className="flex justify-between items-center mb-4">
-            <span className="text-gray-400">Total:</span>
+            <span className="text-gray-400">{t("cart.total")}</span>
             <span className="text-xl font-bold text-white">
-              ${totalPrice.toFixed(2)}
+              ${total.toFixed(2)}
             </span>
           </div>
           <button
-            className="w-full bg-[#CD7F32] text-white py-3 rounded-sm hover:bg-[#B87333] transition-colors"
-            disabled={items.length === 0}
+            onClick={handleCheckout}
+            className="w-full bg-[#CD7F32] text-white py-3 rounded-sm hover:bg-[#B87333] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled={cartItems.length === 0}
           >
-            Checkout
+            {t("cart.checkout")}
           </button>
         </div>
       </div>

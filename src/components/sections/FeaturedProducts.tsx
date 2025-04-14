@@ -4,12 +4,14 @@ import { gunplaApi, GunplaProduct } from "../../services/api";
 import Loading from "../common/Loading";
 import ProductSlider from "../products/ProductSlider";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const FeaturedProducts: React.FC = () => {
   const [products, setProducts] = useState<GunplaProduct[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -18,13 +20,13 @@ const FeaturedProducts: React.FC = () => {
         setProducts(data.slice(0, 20)); // Lấy 20 sản phẩm
         setLoading(false);
       } catch (err) {
-        setError("Failed to load products");
+        setError(t("common.errors.failedToLoad"));
         setLoading(false);
       }
     };
 
     fetchProducts();
-  }, []);
+  }, [t]);
 
   const handleProductClick = (productId: string | number) => {
     navigate(`/product/${productId}`);
@@ -36,7 +38,8 @@ const FeaturedProducts: React.FC = () => {
   return (
     <div className="relative">
       <h2 className="text-2xl font-bold mb-6 text-white flex items-center">
-        <span className="text-[#CD7F32] mr-2">★</span> FEATURED PRODUCTS
+        <span className="text-[#CD7F32] mr-2">★</span>{" "}
+        {t("sections.featured.title")}
       </h2>
       <div className="min-h-[800px] grid grid-rows-[1fr,auto]">
         <div className="relative">

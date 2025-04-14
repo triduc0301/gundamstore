@@ -1,14 +1,20 @@
 import React, { createContext, useContext, useState } from "react";
-import { vi } from "../locales/vi";
-import { en } from "../locales/en";
+import en from "../locales/en";
+import vi from "./../locales/vi";
 
 type Language = "en" | "vi";
+type Translations = typeof en;
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
 }
+
+const translations = {
+  en,
+  vi,
+};
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
   undefined
@@ -21,27 +27,22 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const t = (key: string): string => {
     const keys = key.split(".");
-    let value: any = language === "vi" ? vi : en;
+    let value: any = translations[language];
 
     for (const k of keys) {
-      if (value[k] === undefined) {
-        // Fallback to English if Vietnamese translation is missing
-        if (language === "vi") {
-          value = en;
-          for (const fallbackKey of keys) {
-            if (value[fallbackKey] === undefined) {
-              return key;
-            }
-            value = value[fallbackKey];
-          }
-          return value;
-        }
-        return key;
-      }
+      if (value === undefined) return key;
       value = value[k];
     }
 
-    return value;
+    if (typeof value === "string") {
+      // Handle dynamic values
+      return value.replace(/\{([^}]+)\}/g, (_, p1) => {
+        if (p1 === "year") return new Date().getFullYear().toString();
+        return p1;
+      });
+    }
+
+    return key;
   };
 
   return (

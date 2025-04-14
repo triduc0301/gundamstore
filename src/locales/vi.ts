@@ -1,4 +1,4 @@
-export const vi = {
+export default {
   common: {
     navigation: {
       home: "TRANG CHỦ",
@@ -7,6 +7,24 @@ export const vi = {
       about: "GIỚI THIỆU",
       contact: "LIÊN HỆ"
     },
+    buttons: {
+      moreInfo: "Xem thêm",
+      addToCart: "Thêm vào giỏ",
+      buyNow: "Mua ngay",
+      checkout: "Thanh toán",
+      close: "Đóng"
+    },
+    errors: {
+      failedToLoad: "Không thể tải sản phẩm",
+      somethingWentWrong: "Đã xảy ra lỗi"
+    },
+    time: {
+      hours: "giờ",
+      minutes: "phút",
+      seconds: "giây"
+    },
+    off: "GIẢM",
+    price: "{price}đ",
     search: {
       placeholder: "Tìm kiếm sản phẩm..."
     },
@@ -19,13 +37,16 @@ export const vi = {
       adminDashboard: "Quản trị viên"
     },
     cart: {
-      title: "Giỏ hàng",
-      empty: "Giỏ hàng trống",
-      total: "Tổng cộng",
-      checkout: "Thanh toán",
-      addToCart: "Thêm vào giỏ",
-      addedToCart: "Đã thêm vào giỏ!",
-      quantity: "Số lượng"
+      title: "Giỏ Hàng",
+      empty: "Giỏ hàng của bạn đang trống",
+      clearAll: "Xóa Tất Cả",
+      total: "Tổng Cộng",
+      checkout: "Thanh Toán",
+      continueShopping: "Tiếp Tục Mua Sắm",
+      remove: "Xóa",
+      quantity: "Số Lượng",
+      price: "Giá",
+      subtotal: "Thành Tiền"
     }
   },
   home: {
@@ -349,5 +370,92 @@ export const vi = {
         }
       }
     }
+  },
+  footer: {
+    about: {
+      title: "GUNDAM",
+      description: "Điểm đến hàng đầu của bạn cho các bộ mô hình Gundam và phụ kiện chất lượng cao. Chúng tôi mang tinh hoa thủ công Nhật Bản đến với người hâm mộ trên toàn thế giới."
+    },
+    quickLinks: {
+      title: "Liên Kết Nhanh",
+      shop: "Cửa Hàng",
+      aboutUs: "Về Chúng Tôi",
+      contact: "Liên Hệ",
+      faq: "Câu Hỏi Thường Gặp"
+    },
+    categories: {
+      title: "Danh Mục",
+      highGrade: "High Grade",
+      masterGrade: "Master Grade",
+      realGrade: "Real Grade",
+      perfectGrade: "Perfect Grade"
+    },
+    contactUs: {
+      title: "Liên Hệ",
+      email: "Email: info@gundam-store.com",
+      phone: "Điện thoại: +1 (555) 123-4567",
+      address: "Địa chỉ: 123 Gundam Street",
+      location: "Tokyo, Nhật Bản 100-0001"
+    },
+    bottom: {
+      rights: "© {year} GUNDAM Store. Đã đăng ký bản quyền.",
+      privacy: "Chính Sách Bảo Mật",
+      terms: "Điều Khoản Dịch Vụ",
+      shipping: "Thông Tin Vận Chuyển"
+    }
+  },
+  sections: {
+    featured: {
+      title: "SẢN PHẨM NỔI BẬT",
+      viewAll: "Xem tất cả"
+    },
+    popular: {
+      title: "SẢN PHẨM PHỔ BIẾN",
+      reviews_50plus: "50+ đánh giá",
+      sold_100plus: "Đã bán 100+"
+    },
+    special: {
+      titleHighlight: "ƯU ĐÃI",
+      title: "ĐẶC BIỆT",
+      subtitle: "Ưu đãi có hạn - Đừng bỏ lỡ!",
+      offerEnds: "Kết thúc trong:"
+    },
+    upcoming: {
+      titleHighlight: "MỚI",
+      title: "SẮP RA MẮT",
+      releaseDate: "Ngày phát hành",
+      comingSoon: "Sắp ra mắt",
+      preOrder: "Đặt trước ngay"
+    }
+  },
+  checkout: {
+    title: "Thanh Toán",
+    shippingInfo: "Thông Tin Giao Hàng",
+    paymentInfo: "Thông Tin Thanh Toán",
+    orderSummary: "Tóm Tắt Đơn Hàng",
+    fullName: "Họ và Tên",
+    email: "Email",
+    phone: "Số Điện Thoại",
+    address: "Địa Chỉ",
+    city: "Thành Phố",
+    country: "Quốc Gia",
+    postalCode: "Mã Bưu Điện",
+    paymentMethod: "Phương Thức Thanh Toán",
+    cardNumber: "Số Thẻ",
+    expiryDate: "Ngày Hết Hạn",
+    cvv: "Mã CVV",
+    placeOrder: "Đặt Hàng",
+    backToCart: "Quay Lại Giỏ Hàng",
+    shippingMethod: "Phương Thức Giao Hàng",
+    standard: "Giao Hàng Tiêu Chuẩn",
+    express: "Giao Hàng Nhanh",
+    free: "Miễn Phí",
+    estimatedDelivery: "Thời Gian Giao Hàng Dự Kiến",
+    days: "ngày",
+    orderTotal: "Tổng Đơn Hàng",
+    items: "Sản Phẩm",
+    shipping: "Phí Vận Chuyển",
+    tax: "Thuế",
+    grandTotal: "Tổng Cộng"
   }
 }; 

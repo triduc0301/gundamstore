@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Loading from "../components/common/Loading";
+import ProtectedRoute from "../components/common/ProtectedRoute";
 
 // Lazy load các pages
 const Home = React.lazy(() => import("../pages/Home"));
@@ -8,6 +9,10 @@ const About = React.lazy(() => import("../pages/About"));
 const Contact = React.lazy(() => import("../pages/Contact"));
 const ProductDetail = React.lazy(() => import("../pages/ProductDetail"));
 const AdminProfile = React.lazy(() => import("../pages/admin/AdminProfile"));
+const Checkout = React.lazy(() => import("../pages/Checkout"));
+const OrderConfirmation = React.lazy(
+  () => import("../pages/OrderConfirmation")
+);
 
 // Admin pages
 const AdminLayout = React.lazy(
@@ -30,9 +35,21 @@ const AppRoutes: React.FC = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route
+          path="/order-confirmation/:orderId"
+          element={<OrderConfirmation />}
+        />
 
         {/* Admin Routes */}
-        <Route path="/admin" element={<AdminLayout />}>
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute adminOnly>
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
           <Route index element={<AdminDashboard />} />
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="products" element={<AdminProducts />} />

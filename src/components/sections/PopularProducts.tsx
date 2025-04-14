@@ -3,11 +3,13 @@ import ProductCard from "../products/ProductCard";
 import { gunplaApi, GunplaProduct } from "../../services/api";
 import Loading from "../common/Loading";
 import ProductSlider from "../products/ProductSlider";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const PopularProducts: React.FC = () => {
   const [products, setProducts] = useState<GunplaProduct[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -18,13 +20,13 @@ const PopularProducts: React.FC = () => {
         setProducts(shuffled.slice(0, 10));
         setLoading(false);
       } catch (err) {
-        setError("Failed to load popular products");
+        setError(t("common.errors.failedToLoad"));
         setLoading(false);
       }
     };
 
     fetchProducts();
-  }, []);
+  }, [t]);
 
   if (loading) return <Loading />;
   if (error) return <div className="text-red-500">{error}</div>;
@@ -33,7 +35,8 @@ const PopularProducts: React.FC = () => {
     <div className="py-12 bg-black">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-8 text-white flex items-center">
-          <span className="text-[#CD7F32] mr-2">⭐</span> POPULAR PRODUCTS
+          <span className="text-[#CD7F32] mr-2">⭐</span>{" "}
+          {t("sections.popular.title")}
         </h2>
         <ProductSlider
           products={products}
@@ -46,9 +49,11 @@ const PopularProducts: React.FC = () => {
               <ProductCard product={product} />
               <div className="mt-4 flex justify-between items-center">
                 <span className="text-[#CD7F32] text-sm">
-                  ★★★★★ (50+ reviews)
+                  ★★★★★ ({t(`sections.popular.reviews_50plus`)})
                 </span>
-                <span className="text-white text-sm">100+ sold</span>
+                <span className="text-white text-sm">
+                  {t(`sections.popular.sold_100plus`)}
+                </span>
               </div>
             </div>
           )}
