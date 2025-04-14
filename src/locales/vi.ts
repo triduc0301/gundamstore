@@ -34,19 +34,21 @@ export default {
       logout: "Đăng xuất",
       profile: "Hồ sơ",
       orders: "Đơn hàng",
-      adminDashboard: "Quản trị viên"
+      adminDashboard: "Bảng điều khiển Admin"
     },
     cart: {
-      title: "Giỏ Hàng",
+      title: "Giỏ hàng",
       empty: "Giỏ hàng của bạn đang trống",
-      clearAll: "Xóa Tất Cả",
-      total: "Tổng Cộng",
-      checkout: "Thanh Toán",
-      continueShopping: "Tiếp Tục Mua Sắm",
+      clearAll: "Xóa tất cả",
+      total: "Tổng cộng",
+      checkout: "Thanh toán",
+      continueShopping: "Tiếp tục mua sắm",
       remove: "Xóa",
-      quantity: "Số Lượng",
+      quantity: "Số lượng",
       price: "Giá",
-      subtotal: "Thành Tiền"
+      subtotal: "Tạm tính",
+      addedToCart: "Đã thêm vào giỏ hàng",
+      addToCart: "Thêm vào giỏ hàng"
     }
   },
   home: {
@@ -59,7 +61,7 @@ export default {
       sold: "đã bán"
     },
     upcomingProducts: {
-      title: "SẮP RA MẮT",
+      title: "SẢN PHẨM SẮP RA MẮT",
       releaseDate: "Ngày phát hành",
       comingSoon: "Sắp ra mắt",
       preOrder: "Đặt trước"
@@ -67,7 +69,7 @@ export default {
     specialDeals: {
       title: "ƯU ĐÃI ĐẶC BIỆT",
       subtitle: "Ưu đãi có hạn - Đừng bỏ lỡ!",
-      offerEnds: "Kết thúc trong:",
+      offerEnds: "Ưu đãi kết thúc sau:",
       hours: "giờ",
       mins: "phút",
       secs: "giây",
@@ -77,114 +79,114 @@ export default {
   product: {
     details: {
       modelNumber: "Mã sản phẩm",
-      series: "Series",
-      grade: "Grade",
+      series: "Dòng sản phẩm",
+      grade: "Cấp độ",
       manufacturer: "Nhà sản xuất",
       description: "Mô tả"
     }
   },
   dashboard: {
-    title: "Bảng Điều Khiển",
+    title: "Bảng điều khiển",
     stats: {
-      totalSales: "Tổng Doanh Thu",
-      totalOrders: "Tổng Đơn Hàng",
-      totalCustomers: "Tổng Khách Hàng",
-      conversionRate: "Tỷ Lệ Chuyển Đổi"
+      totalSales: "Tổng doanh thu",
+      totalOrders: "Tổng đơn hàng",
+      totalCustomers: "Tổng khách hàng",
+      conversionRate: "Tỷ lệ chuyển đổi"
     },
     charts: {
-      salesOverview: "Tổng Quan Doanh Số",
-      ordersOverview: "Tổng Quan Đơn Hàng",
-      inventoryFlow: "Luồng Hàng Tồn Kho",
-      stockByGrade: "Hàng Tồn Theo Grade",
-      incomingStock: "Hàng Nhập",
-      currentStock: "Hàng Tồn",
+      salesOverview: "Tổng quan doanh thu",
+      ordersOverview: "Tổng quan đơn hàng",
+      inventoryFlow: "Luồng tồn kho",
+      stockByGrade: "Tồn kho theo cấp độ",
+      incomingStock: "Hàng sắp về",
+      currentStock: "Hàng hiện có",
       months: {
-        jan: "Th1",
-        feb: "Th2",
-        mar: "Th3",
-        apr: "Th4",
-        may: "Th5",
-        jun: "Th6",
-        jul: "Th7",
-        aug: "Th8",
-        sep: "Th9",
-        oct: "Th10",
-        nov: "Th11",
-        dec: "Th12"
+        jan: "Tháng 1",
+        feb: "Tháng 2",
+        mar: "Tháng 3",
+        apr: "Tháng 4",
+        may: "Tháng 5",
+        jun: "Tháng 6",
+        jul: "Tháng 7",
+        aug: "Tháng 8",
+        sep: "Tháng 9",
+        oct: "Tháng 10",
+        nov: "Tháng 11",
+        dec: "Tháng 12"
       },
       days: {
-        mon: "T2",
-        tue: "T3",
-        wed: "T4",
-        thu: "T5",
-        fri: "T6",
-        sat: "T7",
-        sun: "CN"
+        mon: "Thứ 2",
+        tue: "Thứ 3",
+        wed: "Thứ 4",
+        thu: "Thứ 5",
+        fri: "Thứ 6",
+        sat: "Thứ 7",
+        sun: "Chủ nhật"
       }
     }
   },
   about: {
     hero: {
-      title: "Về Chúng Tôi",
-      description: "Chào mừng bạn đến với Golden Watch - Điểm đến đáng tin cậy của bạn cho những chiếc đồng hồ xa xỉ. Chúng tôi đam mê mang đến cho bạn những mẫu đồng hồ tinh tế nhất từ khắp nơi trên thế giới."
+      title: "Về chúng tôi",
+      description: "Chào mừng đến với Golden Watch - Điểm đến đáng tin cậy của bạn cho những chiếc đồng hồ xa xỉ. Chúng tôi đam mê mang đến cho bạn bộ sưu tập đồng hồ tinh xảo nhất từ khắp nơi trên thế giới."
     },
     mission: {
-      title: "Sứ Mệnh Của Chúng Tôi",
+      title: "Sứ mệnh của chúng tôi",
       description: "Cung cấp những chiếc đồng hồ đặc biệt kết hợp giữa kỹ thuật chính xác và thiết kế vượt thời gian, đồng thời mang đến trải nghiệm khách hàng vượt trội."
     },
     vision: {
-      title: "Tầm Nhìn Của Chúng Tôi",
-      description: "Trở thành điểm đến hàng đầu thế giới về đồng hồ xa xỉ, được biết đến với bộ sưu tập được tuyển chọn kỹ lưỡng, dịch vụ chuyên nghiệp và cam kết về sự xuất sắc."
+      title: "Tầm nhìn của chúng tôi",
+      description: "Trở thành điểm đến hàng đầu thế giới về đồng hồ xa xỉ, được biết đến với bộ sưu tập được tuyển chọn, dịch vụ chuyên nghiệp và cam kết xuất sắc."
     },
     team: {
-      title: "Gặp Gỡ Đội Ngũ Của Chúng Tôi",
+      title: "Gặp gỡ đội ngũ của chúng tôi",
       member1: {
         name: "John Smith",
-        role: "Người Sáng Lập & CEO",
+        role: "Người sáng lập & CEO",
         description: "Với hơn 20 năm kinh nghiệm trong ngành đồng hồ, John dẫn dắt đội ngũ của chúng tôi với niềm đam mê và chuyên môn."
       },
       member2: {
         name: "Sarah Johnson",
-        role: "Giám Đốc Sáng Tạo",
-        description: "Sarah mang đến tầm nhìn nghệ thuật để tuyển chọn các bộ sưu tập tuyệt vời và tạo ra những trải nghiệm thương hiệu đáng nhớ."
+        role: "Giám đốc sáng tạo",
+        description: "Sarah mang tầm nhìn nghệ thuật của mình để tuyển chọn bộ sưu tập tuyệt đẹp và tạo ra những trải nghiệm thương hiệu đáng nhớ."
       },
       member3: {
         name: "Michael Chen",
-        role: "Chuyên Gia Kỹ Thuật",
-        description: "Michael đảm bảo mỗi chiếc đồng hồ đều đáp ứng các tiêu chuẩn cao về chất lượng và độ chính xác của chúng tôi."
+        role: "Chuyên gia kỹ thuật",
+        description: "Michael đảm bảo mỗi chiếc đồng hồ đều đáp ứng các tiêu chuẩn chất lượng và độ chính xác cao của chúng tôi."
       }
     },
     values: {
-      title: "Giá Trị Của Chúng Tôi",
+      title: "Giá trị của chúng tôi",
       value1: {
-        title: "Sự Xuất Sắc",
+        title: "Xuất sắc",
         description: "Chúng tôi phấn đấu cho sự hoàn hảo trong mọi khía cạnh của hoạt động kinh doanh, từ việc lựa chọn sản phẩm đến dịch vụ khách hàng."
       },
       value2: {
-        title: "Chính Trực",
-        description: "Chúng tôi kinh doanh với sự trung thực, minh bạch và tôn trọng khách hàng và đối tác."
+        title: "Chính trực",
+        description: "Chúng tôi kinh doanh với sự trung thực, minh bạch và tôn trọng khách hàng và đối tác của mình."
       },
       value3: {
-        title: "Đổi Mới",
+        title: "Đổi mới",
         description: "Chúng tôi không ngừng tìm kiếm những cách mới để nâng cao sản phẩm và cải thiện trải nghiệm khách hàng."
       },
       value4: {
-        title: "Đam Mê",
+        title: "Đam mê",
         description: "Tình yêu của chúng tôi dành cho đồng hồ thúc đẩy chúng tôi chia sẻ kiến thức và nhiệt huyết với khách hàng."
       }
     }
   },
   contact: {
-    title: "Liên Hệ",
-    description: "Bạn có câu hỏi hoặc phản hồi? Chúng tôi rất muốn lắng nghe ý kiến của bạn. Hãy liên hệ với chúng tôi qua bất kỳ kênh nào dưới đây.",
+    title: "Liên hệ",
+    description: "Bạn có câu hỏi hoặc phản hồi? Chúng tôi rất muốn nghe từ bạn. Hãy liên hệ với chúng tôi qua bất kỳ kênh nào dưới đây.",
     info: {
-      title: "Thông Tin Liên Hệ",
+      title: "Thông tin liên hệ",
       address: {
-        title: "Địa Chỉ",
-        value: "123 Đường Vàng, Quận 1, Thành phố Hồ Chí Minh, Việt Nam"
+        title: "Địa chỉ",
+        value: "123 Đường Vàng, Quận 1, TP.HCM, Việt Nam"
       },
       phone: {
-        title: "Điện Thoại",
+        title: "Điện thoại",
         value: "+84 123 456 789"
       },
       email: {
@@ -192,88 +194,88 @@ export default {
         value: "info@goldenwatch.com"
       },
       hours: {
-        title: "Giờ Làm Việc",
-        value: "Thứ Hai - Thứ Sáu: 9:00 - 18:00\nThứ Bảy: 10:00 - 16:00\nChủ Nhật: Nghỉ"
+        title: "Giờ làm việc",
+        value: "Thứ 2 - Thứ 6: 9:00 - 18:00\nThứ 7: 10:00 - 16:00\nChủ nhật: Nghỉ"
       }
     },
     map: {
-      title: "Vị Trí Của Chúng Tôi"
+      title: "Vị trí của chúng tôi"
     },
     form: {
-      title: "Gửi Tin Nhắn Cho Chúng Tôi",
-      name: "Họ Tên",
+      title: "Gửi tin nhắn cho chúng tôi",
+      name: "Họ tên",
       email: "Email",
-      subject: "Tiêu Đề",
-      message: "Nội Dung",
-      submit: "Gửi Tin Nhắn"
+      subject: "Tiêu đề",
+      message: "Nội dung",
+      submit: "Gửi tin nhắn"
     }
   },
   profile: {
-    title: "Hồ Sơ Của Tôi",
+    title: "Hồ sơ của tôi",
     personalInfo: {
-      title: "Thông Tin Cá Nhân",
-      name: "Họ Và Tên",
+      title: "Thông tin cá nhân",
+      name: "Họ tên",
       email: "Email",
-      phone: "Số Điện Thoại",
-      address: "Địa Chỉ",
-      save: "Lưu Thay Đổi"
+      phone: "Số điện thoại",
+      address: "Địa chỉ",
+      save: "Lưu thay đổi"
     },
     orders: {
-      title: "Đơn Hàng Của Tôi",
-      orderId: "Mã Đơn Hàng",
-      date: "Ngày Đặt",
-      status: "Trạng Thái",
-      total: "Tổng Tiền",
-      viewDetails: "Xem Chi Tiết",
+      title: "Đơn hàng của tôi",
+      orderId: "Mã đơn hàng",
+      date: "Ngày đặt",
+      status: "Trạng thái",
+      total: "Tổng cộng",
+      viewDetails: "Xem chi tiết",
       statuses: {
-        pending: "Đang Chờ",
-        processing: "Đang Xử Lý",
-        shipped: "Đã Giao Hàng",
-        delivered: "Đã Nhận",
-        cancelled: "Đã Hủy"
+        pending: "Đang chờ",
+        processing: "Đang xử lý",
+        shipped: "Đã giao hàng",
+        delivered: "Đã nhận",
+        cancelled: "Đã hủy"
       }
     },
     security: {
-      title: "Bảo Mật",
-      changePassword: "Đổi Mật Khẩu",
-      currentPassword: "Mật Khẩu Hiện Tại",
-      newPassword: "Mật Khẩu Mới",
-      confirmPassword: "Xác Nhận Mật Khẩu Mới",
-      update: "Cập Nhật Mật Khẩu"
+      title: "Bảo mật",
+      changePassword: "Đổi mật khẩu",
+      currentPassword: "Mật khẩu hiện tại",
+      newPassword: "Mật khẩu mới",
+      confirmPassword: "Xác nhận mật khẩu mới",
+      update: "Cập nhật mật khẩu"
     },
     notifications: {
-      title: "Thông Báo",
-      email: "Thông Báo Qua Email",
-      sms: "Thông Báo Qua SMS",
-      orderUpdates: "Cập Nhật Đơn Hàng",
-      promotions: "Khuyến Mãi & Ưu Đãi",
-      save: "Lưu Tùy Chọn"
+      title: "Thông báo",
+      email: "Thông báo qua email",
+      sms: "Thông báo qua SMS",
+      orderUpdates: "Cập nhật đơn hàng",
+      promotions: "Khuyến mãi & Ưu đãi",
+      save: "Lưu tùy chọn"
     }
   },
   admin: {
     sidebar: {
-      title: "Quản Trị",
-      shortTitle: "QT",
-      dashboard: "Bảng Điều Khiển",
-      products: "Sản Phẩm",
-      categories: "Danh Mục", 
-      orders: "Đơn Hàng",
-      profile: "Hồ Sơ",
-      accessDenied: "Từ Chối Truy Cập",
+      title: "Bảng điều khiển Admin",
+      shortTitle: "AP",
+      dashboard: "Bảng điều khiển",
+      products: "Sản phẩm",
+      categories: "Danh mục",
+      orders: "Đơn hàng",
+      profile: "Hồ sơ",
+      accessDenied: "Truy cập bị từ chối",
       noPermission: "Bạn không có quyền truy cập trang này.",
-      returnHome: "Quay Về Trang Chủ"
+      returnHome: "Quay về trang chủ"
     },
     profile: {
-      title: "Hồ Sơ Quản Trị",
+      title: "Hồ sơ Admin",
       tabs: {
-        users: "Quản Lý Người Dùng",
-        settings: "Cài Đặt Hệ Thống",
-        analytics: "Phân Tích",
-        logs: "Nhật Ký Hệ Thống"
+        users: "Quản lý người dùng",
+        settings: "Cài đặt hệ thống",
+        analytics: "Phân tích",
+        logs: "Nhật ký hệ thống"
       },
       users: {
-        title: "Quản Lý Người Dùng",
-        addUser: "Thêm Người Dùng",
+        title: "Quản lý người dùng",
+        addUser: "Thêm người dùng",
         search: "Tìm kiếm người dùng...",
         table: {
           id: "ID",
@@ -281,92 +283,92 @@ export default {
           email: "EMAIL",
           role: "VAI TRÒ",
           status: "TRẠNG THÁI",
-          actions: "THAO TÁC"
+          actions: "HÀNH ĐỘNG"
         },
         roles: {
-          admin: "Quản Trị Viên",
-          user: "Người Dùng",
-          moderator: "Điều Hành Viên"
+          admin: "Admin",
+          user: "Người dùng",
+          moderator: "Điều hành viên"
         },
         status: {
-          active: "Hoạt Động",
-          inactive: "Không Hoạt Động",
-          suspended: "Tạm Khóa"
+          active: "Hoạt động",
+          inactive: "Không hoạt động",
+          suspended: "Tạm khóa"
         },
         actions: {
-          edit: "Sửa",
-          delete: "Xóa",
-          view: "Xem Chi Tiết"
+          edit: "Sửa người dùng",
+          delete: "Xóa người dùng",
+          view: "Xem chi tiết"
         }
       },
       settings: {
-        title: "Cài Đặt Hệ Thống",
+        title: "Cài đặt hệ thống",
         general: {
-          title: "Cài Đặt Chung",
-          siteName: "Tên Website",
-          siteDescription: "Mô Tả Website",
-          language: "Ngôn Ngữ Mặc Định",
-          timezone: "Múi Giờ",
-          save: "Lưu Thay Đổi"
+          title: "Cài đặt chung",
+          siteName: "Tên trang web",
+          siteDescription: "Mô tả trang web",
+          language: "Ngôn ngữ mặc định",
+          timezone: "Múi giờ",
+          save: "Lưu thay đổi"
         },
         security: {
-          title: "Cài Đặt Bảo Mật",
-          passwordPolicy: "Chính Sách Mật Khẩu",
-          minLength: "Độ Dài Tối Thiểu",
-          requireNumbers: "Yêu Cầu Số",
-          requireSymbols: "Yêu Cầu Ký Tự Đặc Biệt",
-          sessionTimeout: "Thời Gian Hết Phiên (phút)"
+          title: "Cài đặt bảo mật",
+          passwordPolicy: "Chính sách mật khẩu",
+          minLength: "Độ dài tối thiểu",
+          requireNumbers: "Yêu cầu số",
+          requireSymbols: "Yêu cầu ký tự đặc biệt",
+          sessionTimeout: "Thời gian chờ phiên (phút)"
         },
         email: {
-          title: "Cài Đặt Email",
-          smtpServer: "Máy Chủ SMTP",
+          title: "Cài đặt email",
+          smtpServer: "Máy chủ SMTP",
           smtpPort: "Cổng SMTP",
-          smtpUser: "Tên Đăng Nhập SMTP",
-          smtpPass: "Mật Khẩu SMTP",
-          fromEmail: "Email Gửi",
-          fromName: "Tên Người Gửi"
+          smtpUser: "Tên đăng nhập SMTP",
+          smtpPass: "Mật khẩu SMTP",
+          fromEmail: "Email gửi",
+          fromName: "Tên người gửi"
         }
       },
       analytics: {
-        title: "Phân Tích",
+        title: "Phân tích",
         overview: {
-          users: "Tổng Người Dùng",
-          orders: "Tổng Đơn Hàng",
-          revenue: "Tổng Doanh Thu",
-          visitors: "Tổng Lượt Truy Cập"
+          users: "Tổng người dùng",
+          orders: "Tổng đơn hàng",
+          revenue: "Tổng doanh thu",
+          visitors: "Tổng lượt truy cập"
         },
         charts: {
-          sales: "Tổng Quan Doanh Số",
-          users: "Tăng Trưởng Người Dùng",
-          orders: "Trạng Thái Đơn Hàng"
+          sales: "Tổng quan doanh thu",
+          users: "Tăng trưởng người dùng",
+          orders: "Trạng thái đơn hàng"
         },
         period: {
-          daily: "Hàng Ngày",
-          weekly: "Hàng Tuần",
-          monthly: "Hàng Tháng",
-          yearly: "Hàng Năm"
+          daily: "Hàng ngày",
+          weekly: "Hàng tuần",
+          monthly: "Hàng tháng",
+          yearly: "Hàng năm"
         }
       },
       logs: {
-        title: "Nhật Ký Hệ Thống",
+        title: "Nhật ký hệ thống",
         actions: {
-          download: "Tải Xuống",
-          clear: "Xóa Nhật Ký",
-          refresh: "Làm Mới"
+          download: "Tải nhật ký",
+          clear: "Xóa nhật ký",
+          refresh: "Làm mới"
         },
         table: {
-          timestamp: "Thời Gian",
-          level: "Mức Độ",
-          message: "Nội Dung",
-          user: "Người Dùng",
-          action: "Hành Động",
-          ip: "Địa Chỉ IP"
+          timestamp: "Thời gian",
+          level: "Cấp độ",
+          message: "Tin nhắn",
+          user: "Người dùng",
+          action: "Hành động",
+          ip: "Địa chỉ IP"
         },
         levels: {
-          info: "Thông Tin",
-          warning: "Cảnh Báo",
+          info: "Thông tin",
+          warning: "Cảnh báo",
           error: "Lỗi",
-          debug: "Gỡ Lỗi"
+          debug: "Gỡ lỗi"
         }
       }
     }
@@ -374,35 +376,32 @@ export default {
   footer: {
     about: {
       title: "GUNDAM",
-      description: "Điểm đến hàng đầu của bạn cho các bộ mô hình Gundam và phụ kiện chất lượng cao. Chúng tôi mang tinh hoa thủ công Nhật Bản đến với người hâm mộ trên toàn thế giới."
+      description: "Điểm đến hàng đầu cho các bộ mô hình Gundam và phụ kiện chất lượng cao. Chúng tôi mang đến những tác phẩm thủ công Nhật Bản tốt nhất cho người đam mê trên toàn thế giới."
     },
-    quickLinks: {
-      title: "Liên Kết Nhanh",
-      shop: "Cửa Hàng",
-      aboutUs: "Về Chúng Tôi",
-      contact: "Liên Hệ",
-      faq: "Câu Hỏi Thường Gặp"
+    links: {
+      title: "Liên kết nhanh",
+      products: "Sản phẩm",
+      about: "Về chúng tôi",
+      contact: "Liên hệ",
+      privacy: "Chính sách bảo mật",
+      terms: "Điều khoản dịch vụ"
     },
-    categories: {
-      title: "Danh Mục",
-      highGrade: "High Grade",
-      masterGrade: "Master Grade",
-      realGrade: "Real Grade",
-      perfectGrade: "Perfect Grade"
+    contact: {
+      title: "Liên hệ",
+      phone: "Điện thoại",
+      address: "Địa chỉ",
+      hours: "Giờ làm việc"
     },
-    contactUs: {
-      title: "Liên Hệ",
-      email: "Email: info@gundam-store.com",
-      phone: "Điện thoại: +1 (555) 123-4567",
-      address: "Địa chỉ: 123 Gundam Street",
-      location: "Tokyo, Nhật Bản 100-0001"
+    newsletter: {
+      title: "Bản tin",
+      description: "Đăng ký nhận bản tin để cập nhật thông tin mới nhất và ưu đãi đặc biệt.",
+      placeholder: "Nhập email của bạn",
+      subscribe: "Đăng ký"
     },
-    bottom: {
-      rights: "© {year} GUNDAM Store. Đã đăng ký bản quyền.",
-      privacy: "Chính Sách Bảo Mật",
-      terms: "Điều Khoản Dịch Vụ",
-      shipping: "Thông Tin Vận Chuyển"
-    }
+    rights: "Bảo lưu mọi quyền",
+    shipping: "Thông tin vận chuyển",
+    returns: "Đổi trả",
+    faq: "Câu hỏi thường gặp"
   },
   sections: {
     featured: {
@@ -412,50 +411,59 @@ export default {
     popular: {
       title: "SẢN PHẨM PHỔ BIẾN",
       reviews_50plus: "50+ đánh giá",
-      sold_100plus: "Đã bán 100+"
+      sold_100plus: "100+ đã bán"
     },
     special: {
       titleHighlight: "ƯU ĐÃI",
       title: "ĐẶC BIỆT",
       subtitle: "Ưu đãi có hạn - Đừng bỏ lỡ!",
-      offerEnds: "Kết thúc trong:"
+      offerEnds: "Ưu đãi kết thúc sau:"
     },
     upcoming: {
       titleHighlight: "MỚI",
       title: "SẮP RA MẮT",
       releaseDate: "Ngày phát hành",
       comingSoon: "Sắp ra mắt",
-      preOrder: "Đặt trước ngay"
+      preOrder: "Đặt trước"
     }
   },
   checkout: {
-    title: "Thanh Toán",
-    shippingInfo: "Thông Tin Giao Hàng",
-    paymentInfo: "Thông Tin Thanh Toán",
-    orderSummary: "Tóm Tắt Đơn Hàng",
-    fullName: "Họ và Tên",
+    title: "Thanh toán",
+    shippingInfo: "Thông tin giao hàng",
+    paymentInfo: "Thông tin thanh toán",
+    orderSummary: "Tóm tắt đơn hàng",
+    fullName: "Họ tên",
     email: "Email",
-    phone: "Số Điện Thoại",
-    address: "Địa Chỉ",
-    city: "Thành Phố",
-    country: "Quốc Gia",
-    postalCode: "Mã Bưu Điện",
-    paymentMethod: "Phương Thức Thanh Toán",
-    cardNumber: "Số Thẻ",
-    expiryDate: "Ngày Hết Hạn",
-    cvv: "Mã CVV",
-    placeOrder: "Đặt Hàng",
-    backToCart: "Quay Lại Giỏ Hàng",
-    shippingMethod: "Phương Thức Giao Hàng",
-    standard: "Giao Hàng Tiêu Chuẩn",
-    express: "Giao Hàng Nhanh",
-    free: "Miễn Phí",
-    estimatedDelivery: "Thời Gian Giao Hàng Dự Kiến",
+    phone: "Số điện thoại",
+    address: "Địa chỉ",
+    city: "Thành phố",
+    country: "Quốc gia",
+    postalCode: "Mã bưu điện",
+    paymentMethod: "Phương thức thanh toán",
+    cardNumber: "Số thẻ",
+    expiryDate: "Ngày hết hạn",
+    cvv: "CVV",
+    placeOrder: "Đặt hàng",
+    backToCart: "Quay lại giỏ hàng",
+    shippingMethod: "Phương thức giao hàng",
+    standard: "Giao hàng tiêu chuẩn",
+    express: "Giao hàng nhanh",
+    free: "Miễn phí",
+    estimatedDelivery: "Thời gian giao hàng dự kiến",
     days: "ngày",
-    orderTotal: "Tổng Đơn Hàng",
-    items: "Sản Phẩm",
-    shipping: "Phí Vận Chuyển",
+    orderTotal: "Tổng đơn hàng",
+    items: "Sản phẩm",
+    shipping: "Phí vận chuyển",
     tax: "Thuế",
-    grandTotal: "Tổng Cộng"
+    grandTotal: "Tổng cộng",
+    processing: "Đang xử lý...",
+    errors: {
+      required: "Vui lòng điền thông tin này",
+      invalidEmail: "Email không hợp lệ",
+      invalidCard: "Số thẻ không hợp lệ",
+      invalidExpiry: "Ngày hết hạn không hợp lệ",
+      invalidCvv: "CVV không hợp lệ",
+      failed: "Đặt hàng thất bại. Vui lòng thử lại."
+    }
   }
 }; 

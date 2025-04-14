@@ -376,33 +376,30 @@ export default {
       title: "GUNDAM",
       description: "Your premier destination for high-quality Gundam model kits and accessories. We bring the best of Japanese craftsmanship to enthusiasts worldwide."
     },
-    quickLinks: {
+    links: {
       title: "Quick Links",
-      shop: "Shop",
-      aboutUs: "About Us",
+      products: "Products",
+      about: "About Us",
       contact: "Contact",
-      faq: "FAQ"
-    },
-    categories: {
-      title: "Categories",
-      highGrade: "High Grade",
-      masterGrade: "Master Grade",
-      realGrade: "Real Grade",
-      perfectGrade: "Perfect Grade"
-    },
-    contactUs: {
-      title: "Contact Us",
-      email: "Email: info@gundam-store.com",
-      phone: "Phone: +1 (555) 123-4567",
-      address: "Address: 123 Gundam Street",
-      location: "Tokyo, Japan 100-0001"
-    },
-    bottom: {
-      rights: "© {year} GUNDAM Store. All rights reserved.",
       privacy: "Privacy Policy",
-      terms: "Terms of Service",
-      shipping: "Shipping Info"
-    }
+      terms: "Terms of Service"
+    },
+    contact: {
+      title: "Contact Us",
+      phone: "Phone",
+      address: "Address",
+      hours: "Business Hours"
+    },
+    newsletter: {
+      title: "Newsletter",
+      description: "Subscribe to our newsletter for the latest updates and exclusive offers.",
+      placeholder: "Enter your email",
+      subscribe: "Subscribe"
+    },
+    rights: "All rights reserved",
+    shipping: "Shipping Info",
+    returns: "Returns",
+    faq: "FAQ"
   },
   sections: {
     featured: {
